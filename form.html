@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTMl </title>
+    <link rel="stylesheet" href="style.css">  
+
+</head>
+<body>
+    <div class="header">
+        <img class="logo" src="ww3.jpg">
+    </div>
+    <div class="main">
+        <form action ="" method="POST" class="form" id="form-1">
+            <h2>Log In</h2>
+
+    <div class="spacer"></div>
+
+    <div class="form-group invalid">
+        <label for ="email" class="form-label">Email</label>
+        
+            <span class="accout">Need an accout ?</span>
+             <span class="sign-up">Sign up</span>
+            
+        <br>
+        <input id ="email" name="email" type="text" placeholder="VD:email@dmain.com"><br>
+        <span class="form-message"></span>
+    </div>
+
+    <div class="form-group">
+        <label for ="password" class="form-label">Password</label>
+        <i class="fa-solid fa-eye"></i>
+        <span class="show">Show</span><br>
+        <input id="password" name="password" type="text" placeholder="Nhap mat khau">
+        <span class="form-message"></span>
+    </div>
+
+    <button class="form-submit">Log In</button>
+    <p>Forgot password ?</p>
+</form>
+</div>
+<div class="footer">
+    <p>© 1999 - 2022 W3schools. All rights reserved. Cookie policy, Privacy and Terms.</p>
+</div>
+<script src="validator.js"></script>
+<script>
+    Validator({
+        form:'#form-1',
+        errorSelect :'form-message',
+        rules:[
+            Validator.isEmail('#email'),
+            Validator.minLength('password',8)
+        ]
+    })
+</script>
+</body>
+</html>
